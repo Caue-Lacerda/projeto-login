@@ -1,1 +1,47 @@
 @charset "UTF-8";
+/* Aqui são as regras de reset do site, aqui vai padding e margin 0px para resetar os parametros para não termos problemas mais a frente, e definimos um estilo de fonte padrão. Com tudo isso ainda colocamos um box-sizing que considera o tamanho da borda na largura e altura total */
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* Aqui definimos o background com uma cor solida, aqui não teremos degrade, defnimos a largura em 100% da viewport e altura em 100% da tela */
+body, html {
+    background-color: var(--cor1);
+    height: 100vh;
+    width: 100vw;
+}
+/* Aqui definimos a altura e largura da viewport em 100% e colocamos sua posição relativa */
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+/* Aqui é onde fica a seção de login, aqui defimos parametros de position absolute e colocamos top e left em 50%, como apenas isso não basta para centralizar a caixa de login, utilizamos o transform e com o valor translate e passamos o valor de top e left -50% fazendo a centralização dos elementos  */
+section#login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+
+    background-color: var(--branco);
+    width: 250px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.438);
+}
+/* Aqui fica a parte da imagem e a forma como se comporta no site, definimos ela como display block pór ser mais vantajoso estrategicamente*/
+section#login > div#image {
+    display: block;
+    background: var(--cor1) url(../images/pexels-david-underland-3523621.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 200px;
+}
+
+section#login > div#form-login {
+    display: block;
+    padding: 10px;
+}
