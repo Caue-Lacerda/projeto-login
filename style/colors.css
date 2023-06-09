@@ -1,0 +1,17 @@
+@charset "UTF-8";
+/* Defini que as cores do style vão ficar separadas em outro style por variáveis, assim aumenta o controle e consigo mudar quase todo o style direto por aqui*/
+:root {
+    /* Essas cores são padrão */
+    --branco: #ffffff;
+    --preto: #272727;
+    --cinza: gray;
+    --cinza-claro: lightgray;
+    
+    /* Essas são da paleta principal */
+    --cor1: #2B2E36;
+    --cor2: #5E6475;
+    --cor3: #919AB5;
+    --cor4: #AFBADB;
+    --cor5: #C5D1F5;
+}
+
