@@ -6,18 +6,21 @@
     padding: 0px;
     box-sizing: border-box;
 }
+
 /* Aqui definimos o background com uma cor solida, aqui não teremos degrade, defnimos a largura em 100% da viewport e altura em 100% da tela */
 body, html {
     background-color: var(--cor1);
     height: 100vh;
     width: 100vw;
 }
+
 /* Aqui definimos a altura e largura da viewport em 100% e colocamos sua posição relativa */
 main {
     position: relative;
     height: 100vh;
     width: 100vw;
 }
+
 /* Aqui é onde fica a seção de login, aqui defimos parametros de position absolute e colocamos top e left em 50%, como apenas isso não basta para centralizar a caixa de login, utilizamos o transform e com o valor translate e passamos o valor de top e left -50% fazendo a centralização dos elementos  */
 section#login {
     position: absolute;
@@ -28,13 +31,14 @@ section#login {
 
     background-color: var(--branco);
     width: 250px;
-    height: 500px;
+    height: 55 0px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.438);
 
     transition: width 0.3s, height 0.3s;
     transition-timing-function: ease;
 }
+
 /* Aqui fica a parte da imagem e a forma como se comporta no site, definimos ela como display block pór ser mais vantajoso estrategicamente*/
 section#login > div#image {
     display: block;
@@ -43,17 +47,84 @@ section#login > div#image {
     background-position: center center;
     height: 200px;
 }
+
 /* Aqui definimos a caixa onde o formulário fica como display block da mesma forma que fizemos com a imagem, fizemos porque é mais vantajoso na hora de ajustar as coisas */
 section#login > div#form-login {
     display: block;
     padding: 10px;
 }
 
+/* Aqui colocamos para organizar melhor o login,
+é apenas uma formatação*/
 div#form-login > h1 {
     text-align: center;
     margin-bottom: 10px;
 }
 
+/* A mesma coisa que o comentário acima */
 div#form-login > p {
     font-size: 0.8em;
+}
+
+/* Configurações dos botões de
+de senha e email, eles estão dentro
+de uma classe chamada campo */
+form > div.campo {
+    background-color: var(--cor2);
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+
+/* Como não queremos que o label
+apareça, definimos como display none,
+assim ele fica escondido */
+div.campo > label {
+    display: none;
+}
+
+/* Aqui foi configurado o botão Entrar */
+form > input[type=submit] {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: var(--cor3);
+    color: var(--branco );
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Aqui é para quando o usuário passar
+o mouse em cima ele mudar de cor */
+form > input[type=submit]:hover {
+    background-color: var(--cor4);
+}
+
+/* Configuração do botão esqueci a senha */
+form > a.botao {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    height: 40px;
+    padding-top: 5px;
+    margin-top: 5px;
+    background-color: var(--branco);
+    border: 1px solid var(--cor1);
+    border-radius: 7px;
+    text-decoration: none;
+    color: var(--cor1 );
+}
+
+/* Configuração de passar o mouse em cima
+do botão esquci a senha */
+form > a.botao:hover {
+     background-color: var(--cor5);
+}
+/* Icone do lado direiro do "esqueci a senha"
+dentro do botão */
+form > a.botao > span {
+    font-size: 1em;
 }
